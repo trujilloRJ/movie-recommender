@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-from scipy.sparse import load_npz, save_npz, csr_matrix
+import sys
 
 def fetch_recommendations(movies_df, film_name, metric):
     film_id = movies_df[movies_df['original_title'] == film_name].index[0]
@@ -25,7 +25,11 @@ if __name__ == '__main__':
     movies, combined_metric = load_data()
 
     # get recommnedations
-    film_name = 'Misery'
-    recs = fetch_recommendations(movies, film_name, combined_metric)
-    print(list(recs.loc[:, 'original_title']))
-    recs = recs.to_dict('records')
+    film_name = sys.argv[1]
+    try:
+        recs = fetch_recommendations(movies, film_name, combined_metric)
+        print(f'If you like {film_name} you should see: ')
+        for rec in list(recs.loc[:, 'original_title']):
+            print(rec)
+    except IndexError:
+        print(f'{film_name} is not in the database :(')
