@@ -20,34 +20,33 @@ Available in: `src/movies_filtered.csv`
 - **Release year**: >= 1970
 - **IMDB vote**: >= 4.0
 
-## 2. Usage and example
+## 2. Usage
 
 1- :airplane: Visit the experimental web app: http://movie-recommender-v2.herokuapp.com/
 
-2- :rocket: From the terminal, example:
+Example:
+
+![web_example](web_example.png)
+
+2- :rocket: From the terminal. 
+
+Example:
 `python src/get_recommendations.py "Inglourious Basterds"`
 
+```
 If you like Inglourious Basterds you should see: 
 
 Death Proof
-
 Reservoir Dogs
-
 The Hateful Eight
-
 My Best Friend's Birthday
-
 Kill Bill: Vol. 2
-
 Quel maledetto treno blindato
-
 Django Unchained
-
 Pulp Fiction
-
 Kill Bill: Vol. 1
-
 Schutzengel
+```
 
 
 
