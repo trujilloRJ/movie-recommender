@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Righteous&display=swap');
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/* CUSTOM CSS */
+.text-clamp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+          line-clamp: 5; 
+  -webkit-box-orient: vertical;
+}
+
+.headline { 
+  color: #333; 
+  font-family: 'Righteous', cursive; 
+  font-size: 65px; 
+  font-weight: normal; 
+  line-height: 60px; 
+  text-transform: uppercase; 
+  text-shadow: 2px 2px 0 #eee; 
+  text-align: center; 
+}
+
+@media only screen and (max-width: 600px){
+  .headline{
+    font-size: 42px;
+  }
+}
